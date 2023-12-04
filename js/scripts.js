@@ -45,7 +45,7 @@ function(){
     const carozza = Math.floor(Math.random() * 9) +1;
     const cp = Math.floor(Math.random() * (100000-90000 +1)) +90000;
     console.log(full);
-
+    document.getElementById('my-pass').innerHTML = nomeUtente ;
     document.getElementById('carrozza').innerHTML = carozza ;
     document.getElementById('codice-cp').innerHTML = cp ;
     document.getElementById(`costo-biglietto`).innerHTML += full + ' $'
