@@ -19,6 +19,44 @@ buttonGenera.addEventListener(`click`,
 function(){
     const inputNome = document.getElementById(`nome-utente`);
     const nomeUtente = inputNome.value;
-    console.log(`nomeUtente`);
-}
-)
+    console.log(nomeUtente);
+
+    const inputKm = document.getElementById(`km`);
+    const kmPercorsi = parseInt(inputKm.value);
+    console.log(kmPercorsi);
+    
+    const inputEta = document.getElementById(`age`);
+    const age = parseInt(inputEta.value);
+    console.log(age);
+    
+
+    const prezzo = kmPercorsi * 0.21;
+    console.log (prezzo);
+
+    if ( age > 65 ){
+        full = (prezzo * 0.6).toFixed(2);
+    }
+    else if ( age < 18){
+        full = (prezzo * 0.8).toFixed(2);
+    }
+    else{
+        full = prezzo.toFixed(2);
+    }
+    const carozza = Math.floor(Math.random() * 9) +1;
+    const cp = Math.floor(Math.random() * (100000-90000 +1)) +90000;
+    console.log(full);
+
+    document.getElementById('carrozza').innerHTML = carozza ;
+    document.getElementById('codice-cp').innerHTML = cp ;
+    document.getElementById(`costo-biglietto`).innerHTML += full + ' $'
+
+});
+
+
+const buttonAnnulla  = document.getElementById(`annulla`);
+buttonAnnulla.addEventListener(`click`,
+function(){
+    document.getElementById('carrozza').innerHTML = `` ;
+    document.getElementById('codice-cp').innerHTML = `` ;
+    document.getElementById(`costo-biglietto`).innerHTML = `` ;
+});

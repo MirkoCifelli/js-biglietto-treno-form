@@ -9,49 +9,80 @@
     <!--STYLE.css  -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-danger">
      <main>
         <div class="container">
-           <form>
-            <div class="row">
-                <h2 class="text-center text-uppercase">
-                    Calcola il prezzo del tuo biglietto
-                </h2>
-                <div class="col">
-                        <div>
+            <h2 class="text-center text-uppercase text-light m-4">
+                Calcola il prezzo del tuo biglietto
+            </h2>
+            <div class="row bg-body-tertiary">
+                
+                <div class="col mt-3">
+                        <div class="text-center">
                             <label for="nome-utente" class="text-uppercase">
                                 Nome Cognome
                             </label>
-                            <input class="text-center" id="nome-utente" name="" type="text" placeholder="Inserisci il tuo nome...">
+                            <input class="text-center mt-3" id="nome-utente" name="nome-utente" type="text" placeholder="Inserisci il tuo nome...">
                         </div>   
                 </div>
-                <div class="col">
-                        <div>
+                <div class="col mt-3">
+                        <div class="text-center">
                             <label for="km" class="text-uppercase">
                                 Km da percorrere
                             </label>
-                            <input class="text-center" id="km" name="km" type="number" placeholder="Inserisci i km da percorrere...">
+                            <input class="text-center mt-3" id="km" name="km" type="number" placeholder="Inserisci i km da percorrere...">
                         </div> 
                 </div>
-                <div class="col">
-                        <div>
+                <div class="col mt-3">
+                        <div class="text-center">
                             <label for="age" class="text-uppercase">
                                 Fascia d'eta
                             </label>
-                            <select name="" id="fascia d'eta">
-                                <option value="minorenne">Minorenne</option>
-                                <option value="Maggiore di 65">Maggiore di 65</option>
-                            </select>           
+                            <input class="text-center mt-3" id="age" name="age" type="number" placeholder="Inserisci la tua eta...">          
                         </div>
                 </div> 
             </div>
-            <div class="row text-center">
-                <div class="col">
-                    <button id="genera" class="btn">Genera</button>
-                    <button id="annula" class="btn">Annulla</button>
+            <div class="row text-center bg-body-tertiary">
+                <div class="col m-5">
+                    <button id="genera" class="btn btn-primary  btn-outline-info btn-lg p-2" type="button">Genera</button>
+                    <button id="annula" class="btn btn-primary btn-outline-info btn-lg p-2 ms-5">Annulla</button>
                 </div>
+            </div> 
+            <div class="row">
+                <h2 class="text-uppercase text-center text-light ">
+                    Il tuo biglietto
+                </h2>
+                <div class="col-4 bg-body-secondary">
+                    <h3>
+                        Dettagli passegero
+                    </h3>
+                    <div class="text-uppercase fw-bold">
+                        Nome passegero
+                    </div>
+                    <div>
+                        John Snow
+                    </div>
+                </div>
+                <div class="col-auto bg-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice  CP</th>
+                            <th scope="col">Costo biglietto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="fw-normal">Biglietto standard</th>
+                            <td id="carrozza"></td>
+                            <td id="codice-cp"></td>
+                            <td id="costo-biglietto"></td>
+                          </tr>
+                        </tbody>
+                      </table>
             </div>
-        </form>  
         </div>
      </main>
     <script src="js/scripts.js" type="text/javascript"></script>
