@@ -10,28 +10,50 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <!-- Inizio Header Principale -->
-     <header>
+     <main>
         <div class="container">
-            HEADER
+           <form>
+            <div class="row">
+                <h2 class="text-center text-uppercase">
+                    Calcola il prezzo del tuo biglietto
+                </h2>
+                <div class="col">
+                        <div>
+                            <label for="nome-utente" class="text-uppercase">
+                                Nome Cognome
+                            </label>
+                            <input class="text-center" id="nome-utente" name="" type="text" placeholder="Inserisci il tuo nome...">
+                        </div>   
+                </div>
+                <div class="col">
+                        <div>
+                            <label for="km" class="text-uppercase">
+                                Km da percorrere
+                            </label>
+                            <input class="text-center" id="km" name="km" type="number" placeholder="Inserisci i km da percorrere...">
+                        </div> 
+                </div>
+                <div class="col">
+                        <div>
+                            <label for="age" class="text-uppercase">
+                                Fascia d'eta
+                            </label>
+                            <select name="" id="fascia d'eta">
+                                <option value="minorenne">Minorenne</option>
+                                <option value="Maggiore di 65">Maggiore di 65</option>
+                            </select>           
+                        </div>
+                </div> 
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <button id="genera" class="btn">Genera</button>
+                    <button id="annula" class="btn">Annulla</button>
+                </div>
+            </div>
+        </form>  
         </div>
-    </header>
-    <!-- Fine Header Principale -->
-    
-    <!-- Inizio Main -->
-    <main>
-        <div class="container">
-            MAIN
-        </div>
-    </main>
-    <!-- Fine Main -->
-    
-    <!-- Inizio Footer Principale -->
-    <footer>
-        <div class="container">
-            FOOTER
-        </div>
-    </footer>
-    <!-- Fine Footer Principale -->
+     </main>
+    <script src="js/scripts.js" type="text/javascript"></script>
 </body>
 </html>
